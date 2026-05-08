@@ -1,12 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoShop — Catálogo Interactivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
-    <h2>oneobmfb</h2>
-    
+  <!-- Fondo animado con orbes -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="app-container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo-group">
+        <div class="logo-icon" aria-hidden="true">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <div class="logo-text">
+          <h1>EcoShop</h1>
+          <span>Catálogo Sostenible</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema"></button>
+        <div class="cart-badge" id="cartBadge" aria-label="Carrito de compras" title="Carrito">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="count" id="cartCount">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats-bar" aria-label="Estadísticas del inventario">
+      <div class="stat-card">
+        <div class="stat-icon green"><i class="fas fa-box-open"></i></div>
+        <div class="stat-info">
+          <label>Productos</label>
+          <div class="value" id="statProducts">0</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon amber"><i class="fas fa-coins"></i></div>
+        <div class="stat-info">
+          <label>Valor Inventario</label>
+          <div class="value" id="statValue">$0</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon coral"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="stat-info">
+          <label>Agotados</label>
+          <div class="value" id="statOutOfStock">0</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon cyan"><i class="fas fa-cubes"></i></div>
+        <div class="stat-info">
+          <label>Unidades Totales</label>
+          <div class="value" id="statUnits">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLES: BUSCADOR + FILTROS -->
+    <section class="controls" aria-label="Controles de filtrado">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar productos..." aria-label="Buscar productos por nombre">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="filter-buttons" id="filterButtons" role="group" aria-label="Filtrar por categoría">
+        <!-- Se generan dinámicamente -->
+      </div>
+    </section>
+
+    <!-- GRILLA DE PRODUCTOS -->
+    <main class="products-grid" id="productsGrid" aria-label="Catálogo de productos">
+      <!-- Se generan dinámicamente -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>EcoShop &mdash; Catálogo interactivo sostenible &middot; Datos persistentes con <i class="fas fa-database" style="color:var(--accent)"></i> localStorage</p>
+    </footer>
+  </div>
+
+  <!-- PANEL DE DETALLE -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="detail-panel" id="detailPanel" aria-label="Detalle del producto">
+    <button class="detail-close" id="detailClose" aria-label="Cerrar panel de detalle">
+      <i class="fas fa-times"></i>
+    </button>
+    <img class="detail-img" id="detailImg" src="" alt="">
+    <div class="detail-content">
+      <div class="detail-category" id="detailCategory"></div>
+      <h2 class="detail-name" id="detailName"></h2>
+      <div class="detail-price" id="detailPrice"></div>
+      <p class="detail-desc" id="detailDesc"></p>
+      <div class="detail-meta">
+        <div class="meta-item">
+          <label>Stock</label>
+          <div class="meta-value" id="detailStock"></div>
+        </div>
+        <div class="meta-item">
+          <label>ID</label>
+          <div class="meta-value" id="detailId"></div>
+        </div>
+      </div>
+      <button class="detail-buy-btn" id="detailBuyBtn">
+        <i class="fas fa-shopping-bag"></i>
+        <span>Comprar</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- TOASTS -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
