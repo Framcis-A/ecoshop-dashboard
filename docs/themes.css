@@ -1,0 +1,17 @@
+:root{
+
+    --bg:#0f172a;
+
+    --text:#f8fafc;
+
+    --muted:#94a3b8;
+
+    --accent:#22c55e;
+
+    --glass:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.12);
+
+    --shadow:
+    0 10px 40px rgba(0,0,0,.35);
+}

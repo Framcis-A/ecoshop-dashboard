@@ -1,0 +1,39 @@
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:25px;
+    }
+
+    .controls{
+
+        flex-direction:column;
+    }
+
+    .products-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .logo-text h1{
+
+        font-size:30px;
+    }
+
+    .stat-card{
+
+        padding:22px;
+    }
+
+    .product-content h3{
+
+        font-size:24px;
+    }
+
+}

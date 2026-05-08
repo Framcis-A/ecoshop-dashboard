@@ -1,12 +1,512 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>EcoShop — Catálogo Interactivo</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="docs/style.css">
+    <link rel="stylesheet" href="docs/themes.css">
+    <link rel="stylesheet" href="docs/responsive.css">
+    <link rel="stylesheet" href="docs/animations.css">
+
 </head>
+
 <body>
-    <h2>oneobmfb</h2>
-    
+
+    <!-- BACKGROUND -->
+
+    <div class="bg-orbs">
+
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+    </div>
+
+    <!-- APP -->
+
+    <div class="app-container">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="logo-group">
+
+                <div class="logo-icon">
+
+                    <i class="fas fa-leaf"></i>
+
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>EcoShop</h1>
+
+                    <span>Catálogo Sostenible</span>
+
+                </div>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button class="theme-toggle"></button>
+
+                <div class="cart-badge">
+
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span class="count">0</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- STATS -->
+
+        <section class="stats-bar">
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fas fa-box-open"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <label>Productos</label>
+
+                    <div class="value">20</div>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon amber">
+
+                    <i class="fas fa-coins"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <label>Valor Inventario</label>
+
+                    <div class="value">$18,500</div>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon coral">
+
+                    <i class="fas fa-exclamation-triangle"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <label>Agotados</label>
+
+                    <div class="value">2</div>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon cyan">
+
+                    <i class="fas fa-cubes"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <label>Unidades</label>
+
+                    <div class="value">120</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTROLS -->
+
+        <section class="controls">
+
+            <div class="search-box">
+
+                <input type="text" placeholder="Buscar productos...">
+
+                <i class="fas fa-search"></i>
+
+            </div>
+
+            <div class="filter-buttons">
+
+                <button class="active">Todos</button>
+                <button>Tecnología</button>
+                <button>Moda</button>
+                <button>Deportes</button>
+                <button>Accesorios</button>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUCTS -->
+
+        <main class="products-grid">
+
+            <!-- TECNOLOGÍA -->
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Tecnología</span>
+                    <h3>iPhone Pro</h3>
+                    <p>Smartphone premium con cámara avanzada.</p>
+                    <div class="product-bottom">
+                        <div class="price">$1299</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Tecnología</span>
+                    <h3>MacBook Pro</h3>
+                    <p>Potencia extrema para productividad profesional.</p>
+                    <div class="product-bottom">
+                        <div class="price">$3200</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Tecnología</span>
+                    <h3>Audífonos Premium</h3>
+                    <p>Cancelación de ruido y audio envolvente.</p>
+                    <div class="product-bottom">
+                        <div class="price">$350</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Tecnología</span>
+                    <h3>Smart Watch</h3>
+                    <p>Reloj inteligente con monitoreo avanzado.</p>
+                    <div class="product-bottom">
+                        <div class="price">$420</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Tecnología</span>
+                    <h3>Laptop Gamer</h3>
+                    <p>Máximo rendimiento para gaming extremo.</p>
+                    <div class="product-bottom">
+                        <div class="price">$2400</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODA -->
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Moda</span>
+                    <h3>Sneakers Urban</h3>
+                    <p>Diseño moderno y máxima comodidad.</p>
+                    <div class="product-bottom">
+                        <div class="price">$210</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Moda</span>
+                    <h3>Camiseta Oversize</h3>
+                    <p>Estilo streetwear premium minimalista.</p>
+                    <div class="product-bottom">
+                        <div class="price">$60</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Moda</span>
+                    <h3>Chaqueta Denim</h3>
+                    <p>Diseño elegante y resistente.</p>
+                    <div class="product-bottom">
+                        <div class="price">$180</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Moda</span>
+                    <h3>Gorra Classic</h3>
+                    <p>Accesorio moderno con estilo urbano.</p>
+                    <div class="product-bottom">
+                        <div class="price">$45</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Moda</span>
+                    <h3>Sudadera Premium</h3>
+                    <p>Interior térmico y acabado premium.</p>
+                    <div class="product-bottom">
+                        <div class="price">$140</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEPORTES -->
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Deportes</span>
+                    <h3>Nike Air Max</h3>
+                    <p>Zapatillas premium para entrenamiento.</p>
+                    <div class="product-bottom">
+                        <div class="price">$180</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Deportes</span>
+                    <h3>Balón Profesional</h3>
+                    <p>Balón oficial para partidos profesionales.</p>
+                    <div class="product-bottom">
+                        <div class="price">$90</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Deportes</span>
+                    <h3>Mancuernas Pro</h3>
+                    <p>Perfectas para entrenamiento intenso.</p>
+                    <div class="product-bottom">
+                        <div class="price">$150</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Deportes</span>
+                    <h3>Bicicleta MTB</h3>
+                    <p>Bicicleta todoterreno premium.</p>
+                    <div class="product-bottom">
+                        <div class="price">$980</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Deportes</span>
+                    <h3>Guantes Fitness</h3>
+                    <p>Comodidad y agarre profesional.</p>
+                    <div class="product-bottom">
+                        <div class="price">$35</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACCESORIOS -->
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Accesorios</span>
+                    <h3>Mochila Premium</h3>
+                    <p>Espaciosa y perfecta para viajes largos.</p>
+                    <div class="product-bottom">
+                        <div class="price">$160</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Accesorios</span>
+                    <h3>Cámara Vintage</h3>
+                    <p>Captura imágenes con calidad profesional.</p>
+                    <div class="product-bottom">
+                        <div class="price">$640</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Accesorios</span>
+                    <h3>Gafas Premium</h3>
+                    <p>Protección UV y diseño elegante.</p>
+                    <div class="product-bottom">
+                        <div class="price">$120</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Accesorios</span>
+                    <h3>Maletín Ejecutivo</h3>
+                    <p>Diseño elegante para oficina y viajes.</p>
+                    <div class="product-bottom">
+                        <div class="price">$280</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1200&auto=format&fit=crop" alt="">
+                </div>
+                <div class="product-content">
+                    <span class="product-category">Accesorios</span>
+                    <h3>Anillos Luxury</h3>
+                    <p>Accesorios modernos con acabado premium.</p>
+                    <div class="product-bottom">
+                        <div class="price">$220</div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                EcoShop — Dashboard UI Premium · Powered by LocalStorage
+            </p>
+
+        </footer>
+
+    </div>
+
 </body>
 </html>
